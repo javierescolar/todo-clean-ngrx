@@ -12,6 +12,11 @@ specifiers:
   '@angular/platform-browser': ^15.0.0
   '@angular/platform-browser-dynamic': ^15.0.0
   '@angular/router': ^15.0.0
+  '@ngrx/effects': 15.1.0
+  '@ngrx/entity': 15.1.0
+  '@ngrx/schematics': ^15.1.0
+  '@ngrx/store': 15.1.0
+  '@ngrx/store-devtools': ^15.1.0
   '@types/jasmine': ~4.3.0
   jasmine-core: ~4.5.0
   karma: ~6.4.0
@@ -33,6 +38,9 @@ dependencies:
   '@angular/platform-browser': 15.0.4_bwwplqn6fknm3semymfqlvw5bm
   '@angular/platform-browser-dynamic': 15.0.4_hnn6v3m7xpfwy5wugozvutqsyi
   '@angular/router': 15.0.4_6qoe6dvkj2mvffppuvjrhovg7y
+  '@ngrx/effects': 15.1.0_65g4m72snjfps2n4larmw6czpa
+  '@ngrx/entity': 15.1.0_65g4m72snjfps2n4larmw6czpa
+  '@ngrx/store': 15.1.0_35fj7bqlhadjjbsew5x5pstq4q
   rxjs: 7.5.7
   tslib: 2.4.1
   zone.js: 0.12.0
@@ -41,6 +49,8 @@ devDependencies:
   '@angular-devkit/build-angular': 15.0.4_y342vsq6j2mmp344qnyje3meee
   '@angular/cli': 15.0.4
   '@angular/compiler-cli': 15.0.4_ewn2ril7hiljdjavj4fhvjxokq
+  '@ngrx/schematics': 15.1.0
+  '@ngrx/store-devtools': 15.1.0_uvzxxoyw6l4xnby6ydo3o4ocwy
   '@types/jasmine': 4.3.1
   jasmine-core: 4.5.0
   karma: 6.4.1
@@ -1724,6 +1734,57 @@ packages:
   /@leichtgewicht/ip-codec/2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
+
+  /@ngrx/effects/15.1.0_65g4m72snjfps2n4larmw6czpa:
+    resolution: {integrity: sha512-/8YnhzyAOTdI9RYJAqmIIvh8ip4M4x4DrRyrdDDc62oFM3TrVOvknUUpMp5NxKpKph8hSpevAwaeEBDWGnKkjg==}
+    peerDependencies:
+      '@angular/core': ^15.0.0
+      '@ngrx/store': 15.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 15.0.4_rxjs@7.5.7+zone.js@0.12.0
+      '@ngrx/store': 15.1.0_35fj7bqlhadjjbsew5x5pstq4q
+      rxjs: 7.5.7
+      tslib: 2.4.1
+    dev: false
+
+  /@ngrx/entity/15.1.0_65g4m72snjfps2n4larmw6czpa:
+    resolution: {integrity: sha512-CvE51HR+m5Nhbh4Sr3rDcm93kGZBkbrsVsRf1HR0V7e03Y87IycAEM2loveT7pELLO3+LlZAwWUxVl1HIO/7hg==}
+    peerDependencies:
+      '@angular/core': ^15.0.0
+      '@ngrx/store': 15.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 15.0.4_rxjs@7.5.7+zone.js@0.12.0
+      '@ngrx/store': 15.1.0_35fj7bqlhadjjbsew5x5pstq4q
+      rxjs: 7.5.7
+      tslib: 2.4.1
+    dev: false
+
+  /@ngrx/schematics/15.1.0:
+    resolution: {integrity: sha512-iGCk6kGPUyIhAcKWpWtidf+O3oe10k6JeAvskBHx+1gbSUKcuoEDRi6gYyWTUyT8KbQVLPOfGJfU/XKR0grfzA==}
+    dev: true
+
+  /@ngrx/store-devtools/15.1.0_uvzxxoyw6l4xnby6ydo3o4ocwy:
+    resolution: {integrity: sha512-InEFdjg2cE0nLgdWWcjXa50SFlzxSVOoeudRqkqQlJlpJ/0RPljlRXHXT63E5cUpryTxYdK2QcE4n5vngq/48g==}
+    peerDependencies:
+      '@ngrx/store': 15.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@ngrx/store': 15.1.0_35fj7bqlhadjjbsew5x5pstq4q
+      rxjs: 7.5.7
+      tslib: 2.4.1
+    dev: true
+
+  /@ngrx/store/15.1.0_35fj7bqlhadjjbsew5x5pstq4q:
+    resolution: {integrity: sha512-Wxjme7yJnxD6il6fGZdFTdSs9gL+6OFW8/II9vApFokUb0E7UQBm8RYb9dYJ2IQJvWXwO+2ItSaecRUZgt39kA==}
+    peerDependencies:
+      '@angular/core': ^15.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 15.0.4_rxjs@7.5.7+zone.js@0.12.0
+      rxjs: 7.5.7
+      tslib: 2.4.1
 
   /@ngtools/webpack/15.0.4_rjzawauahcc32b5svyn5n42mbq:
     resolution: {integrity: sha512-+1riOTohRHhN2N8Y+usHFtNz+Rt6q/44puj9rwjlKwWIA+6qxAv3kQhVHivVaU3bCAB9B/3jAxSuZTNHk0wgTg==}

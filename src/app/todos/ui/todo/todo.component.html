@@ -1,0 +1,10 @@
+<button *ngIf="!todo.completed" (click)="update()">
+  <img src="assets/icons/pending.svg" alt="pending" />
+</button>
+<button *ngIf="todo.completed" (click)="update()">
+  <img src="assets/icons/complete.svg" alt="complete" />
+</button>
+<span [ngClass]="{'line-through': todo.completed}">{{ todo.description }}</span>
+<button class="remove" (click)="remove()">
+  <img src="assets/icons/delete.svg" alt="delete" />
+</button>

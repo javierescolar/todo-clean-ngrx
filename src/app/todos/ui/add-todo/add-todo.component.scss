@@ -1,0 +1,15 @@
+
+
+
+form{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  input[type=text] {
+    width: inherit;
+  }
+  button {
+    background: rgb(59, 133, 253);
+  }
+  margin: 10px 0;
+}

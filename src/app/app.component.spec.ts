@@ -1,16 +1,24 @@
 import { TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { provideMockStore } from '@ngrx/store/testing';
+
 import { AppComponent } from './app.component';
+import { AddTodoComponent } from './todos/ui/add-todo/add-todo.component';
+import { TodoComponent } from './todos/ui/todo/todo.component';
+import { TodosComponent } from './todos/ui/todos.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule, ReactiveFormsModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        TodosComponent,
+        TodoComponent,
+        AddTodoComponent,
       ],
+      providers: [provideMockStore({})],
     }).compileComponents();
   });
 
@@ -24,12 +32,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('todos');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('todos app is running!');
   });
 });

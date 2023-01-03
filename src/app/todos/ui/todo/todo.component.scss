@@ -1,0 +1,17 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  transform: scale(0.60);
+  background: transparent;
+  border:0;
+  cursor: pointer;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
